@@ -1,0 +1,40 @@
+﻿@page "/library"
+@rendermode InteractiveServer
+@using MediaTracker.UI.Models
+
+<h3>My Library</h3>
+
+@code{
+	// Gets shared data
+	MediaManager manager = MediaManager.Instance;
+	// Toggle completed status
+	void Toggle(MediaItem item)
+	{
+		manager.ToggleCompleted(item);
+	}
+	// Remove item from list
+	void Remove(MediaItem item)
+	{
+		manager.RemoveItem(item);
+	}
+}
+
+@foreach (var type in new string[] { "Movie", "Show", "Music"})
+{
+	<h5>@type</h5>
+
+	@foreach (var item in manager.GetItemsByType(type))
+	{
+		<div>
+			<b>@item.Name</b>
+
+			<button @onclick="() => Toggle(item)">
+				@(item.IsCompleted ? "Completed" : "Not Completed")
+			</button>
+
+			<button @onclick="() => Remove(item)">
+				Delete
+			</button>
+		</div>
+	}
+}

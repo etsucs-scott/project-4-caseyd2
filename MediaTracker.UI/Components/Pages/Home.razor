@@ -1,0 +1,48 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+@using MediaTracker.UI.Models
+
+<h3>Media Tracker</h3>
+
+<div>
+	<input placeholder="Name" @bind="newItem.Name" />
+
+	<select @bind="newItem.Type">
+		<option value="">Select Type</option>
+		<option value="Movie">Movie</option>
+		<option value="Show">Show</option>
+		<option value="Music">Music</option>
+	</select>
+
+	<button type="button" @onclick="() => AddItem()">Add</button>
+</div>
+
+<br />
+
+@code{
+	// Holds all data
+	MediaManager manager = MediaManager.Instance;
+	// Holds what user is entering
+	MediaItem newItem = new MediaItem();
+	//runs when add is clicked
+	void AddItem()
+	{
+		//Don't add if type is empty
+		if (string.IsNullOrWhiteSpace(newItem.Type))
+			return;
+		manager.AddItem(newItem);
+		// Reset input after adding
+		newItem = new MediaItem();
+	}
+	// Removes an item
+	void Delete(MediaItem item)
+	{
+		manager.RemoveItem(item);
+	}
+	// Marks item complete or not complete
+	void Toggle(MediaItem item)
+	{
+		manager.ToggleCompleted(item);
+	}
+}

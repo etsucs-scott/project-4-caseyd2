@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaTracker.UI", "MediaTracker.UI.csproj", "{2594AC1D-3B8F-48FC-9F71-477BA090543A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaTracker.Tests", "..\MediaTracker.Tests\MediaTracker.Tests.csproj", "{F548B361-1FC9-472E-8F12-7D57F9A62A8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		..\Project 4 UML.pdf = ..\Project 4 UML.pdf
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2594AC1D-3B8F-48FC-9F71-477BA090543A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2594AC1D-3B8F-48FC-9F71-477BA090543A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2594AC1D-3B8F-48FC-9F71-477BA090543A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2594AC1D-3B8F-48FC-9F71-477BA090543A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F548B361-1FC9-472E-8F12-7D57F9A62A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F548B361-1FC9-472E-8F12-7D57F9A62A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F548B361-1FC9-472E-8F12-7D57F9A62A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F548B361-1FC9-472E-8F12-7D57F9A62A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {447471DB-E9A5-41D1-A9C5-26AF1F2BA5BF}
+	EndGlobalSection
+EndGlobal

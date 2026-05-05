@@ -1,43 +1,35 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/qJo95Bxr)
-# CSCI 1260 — Project
-
-## Project Instructions
-All project requirements, grading criteria, and submission details are provided on **D2L**.  
-Refer to D2L as the *authoritative source* for this assignment.
-
-This repository is intentionally minimal. You are responsible for:
-- Creating the solution and projects
-- Designing the class structure
-- Implementing the required functionality
+# Media Tracker
+This is a simple media tracker app made with Blazor. It allows you to add movies, shows, or songs, mark them as completed, and delete them.
+The data is saved to a json file so it stays the same when the app is closed and reopened. 
 
 ---
 
-## Getting Started (CLI)
+## Features
+-- Add media items (movie, show, or song)
+-- Mark items as completed or not completed
+-- Delete items
+-- Data is saved using a json file
+-- Items are grouped by type using a dictionary
 
-You may use **Visual Studio**, **VS Code**, or the **terminal**.
+## How it works
+-- The app uses two main classes:
 
-### Create a solution
-```bash
-dotnet new sln -n ProjectName
-```
+- MediaItem: stores the name, type, and completion status
+- MediaManager: handles the adding, removing, saving, and loading of items
 
-### Create a project (example: console app)
-```bash
-dotnet new console -n ProjectName.App
-```
+## Data structure
+A Dictionary<string, List<MediaItem> is used to store the items 
 
-### Add the project to the solution
-```bash
-dotnet sln add ProjectName.App
-```
+## File storage
+The app saves data to a file called data.json
 
-### Build and run
-```bash
-dotnet build
-dotnet run --project ProjectName.App
-```
+## Exception handling 
+Try/catch is used when saving and loading the json file to prevent the app from crashing if anythign goes wrong.
 
-## Notes
-- Commit early and commit often.
-- Your repository history is part of your submission.
-- Update this README with build/run instructions specific to your project.
+## Running the App
+1. open the project in Visual Studio
+2. Run the app
+3. Use the home page to add items
+4. Go to library to view and manage items
+
+
